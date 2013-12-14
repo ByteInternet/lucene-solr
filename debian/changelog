@@ -1,0 +1,52 @@
+lucene-solr (3.6.2+dfsg-2) unstable; urgency=low
+
+  * Fixes for new security vulnerabilities (Closes: #731113):
+    - debian/patches/CVE-2013-6397.patch:
+      Fix DocumentAnalysisRequestHandler to correctly use
+      EmptyEntityResolver to prevent loading of external entities like
+      UpdateRequestHandler does.
+      CVE-2013-6397
+    - debian/patches/CVE-2013-6407_CVE-2013-6408.patch:
+      XML and XSLT UpdateRequestHandler should not try to
+      resolve external entities. This improves speed of loading e.g.
+      XSL-transformed XHTML documents.
+      CVE-2013-6407
+      Fix XML parsing in XPathEntityProcessor to correctly
+      expand named entities, but ignore external entities.
+      CVE-2013-6408
+
+ -- James Page <james.page@ubuntu.com>  Sat, 14 Dec 2013 22:07:54 +0000
+
+lucene-solr (3.6.2+dfsg-1) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- James Page <james.page@ubuntu.com>  Thu, 16 May 2013 10:45:27 +0100
+
+lucene-solr (3.6.2+dfsg-1~exp1) experimental; urgency=low
+
+  [ tony mancill ]
+  * solr-jetty: correct symlink to solr in /var/lib/jetty/webapps/
+    (Closes: #696347)
+
+  [ James Page ]
+  * New upstream release.
+  * d/copyright: Removed surplus GPL-2 paragraph.
+  * d/control: Tidied short descriptions.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 07 Jan 2013 14:23:47 +0000
+
+lucene-solr (3.6.1+dfsg-1) experimental; urgency=low
+
+  * New upstream release.
+  * Add dependency on JDK for solr-jetty (LP: #1046732):
+    - d/control: Add extra Depends on default-jdk | java5-jdk as jetty
+      requires a full JDK to support use of JSP's which solr uses. 
+
+ -- James Page <james.page@ubuntu.com>  Wed, 21 Nov 2012 09:31:05 +0000
+
+lucene-solr (3.6.0+dfsg-1) unstable; urgency=low
+
+  * Initial release. (Closes: #594027)
+
+ -- James Page <james.page@ubuntu.com>  Tue, 29 May 2012 17:32:24 +0100

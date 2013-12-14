@@ -1,0 +1,10 @@
+#add-osgi-manifest
+javacc-system.patch
+fix-jar-matches.patch
+disable-ivy.patch
+icu4.4-compat.patch
+regex-test-failure.patch
+#set-data-dir.patch
+remove-prettify.patch
+CVE-2013-6397.patch
+CVE-2013-6407_CVE-2013-6408.patch

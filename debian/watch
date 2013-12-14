@@ -1,0 +1,3 @@
+version=3
+opts=dversionmangle=s/\+dfsg// \
+http://githubredir.debian.net/github/apache/lucene-solr/lucene_solr_(\d+)_(\d+)_(\d+).tar.gz debian debian/orig-tar.sh
