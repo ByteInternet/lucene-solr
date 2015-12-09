@@ -1,7 +1,4 @@
 
-# debian
-.pc
-solr/core/src/java/org/apache/solr/util/EmptyEntityResolver.java
 
 # .
 /classes
