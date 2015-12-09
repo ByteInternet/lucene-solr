@@ -20,7 +20,7 @@ override_dh_auto_build:
 	mkdir -p lucene/site/build/site
 	ant -buildfile build.xml -Dversion=$(DEB_UPSTREAM_VERSION) get-maven-poms
 	ant -buildfile lucene/build.xml -propertyfile debian/ant.properties \
-		-Dversion=$(DEB_UPSTREAM_VERSION) javacc jar-core docs javadocs build-contrib
+		-Dversion=$(DEB_UPSTREAM_VERSION) javacc jar-core build-contrib
 	ant -buildfile solr/contrib/dataimporthandler/build.xml \
 		-propertyfile debian/ant.properties -Dversion=$(DEB_UPSTREAM_VERSION) dist
 	ant -buildfile solr/build.xml -propertyfile debian/ant.properties \
