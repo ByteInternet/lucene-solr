@@ -7,6 +7,8 @@ DEB_UPSTREAM_VERSION=$(shell dpkg-parsechangelog | sed -rne 's,^Version: ([^+]+)
 %:
 	dh $@ --with maven_repo_helper
 
+override_dh_installdocs:
+
 override_dh_auto_configure:
 	# Link in jars from /usr/share/java rather
 	# than patching the build process
